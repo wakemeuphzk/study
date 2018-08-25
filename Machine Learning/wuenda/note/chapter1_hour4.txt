@@ -1,1 +1,12 @@
 Unsupervised Learning 无监督学习
+
+1.clustering(聚类)
+ eg:google news、星系的划分、细分市场
+ 
+2.鸡尾酒会算法
+
+3.Octave（编程、建模、学习）
+ 使用octave做第一步的学习算法原型搭建
+ 
+4.无监督学习：
+交给算法大量的数据，并让算法为我们从数据中找出某种结构。
