@@ -1,6 +1,7 @@
 model representation(模型描述)
 
 1.监督学习的过程
+要将训练集“喂”给我们的学习算法，进而学习得到一个假设$h$，然后将我们要预测的房屋的尺寸作为输入变量输入给$h$，预测出该房屋的交易价格作为输出变量输出为结果。
 
 2.Hhousing Prices
 training set(训练集) of housing prices
@@ -11,6 +12,12 @@ y:output variable\target variable
 （x,y）:one training example
 
 Machine Learning/wuenda/note/chapter2_hour6.md
+
+3.假设
+$h$ 代表hypothesis(假设)，$h$表示一个函数
+
+4.单变量线性回归问题
+只含有一个特征/输入变量，因此这样的问题叫作单变量线性回归问题。
 
 
 
