@@ -1,0 +1,8 @@
+1.machine learning definition:
+一个程序被认为能从经验E中学习，解决任务T，达到性能度量值P，经过P测定E上的表现因经验E有所提升。
+以跳棋为例，经验E 就是程序上万次的自我练习的经验而任务T 就是下棋。性能度量值P呢，就是它在与一些新的对手比赛时，赢得比赛的概率。
+
+
+2.算法分类：
+ Supervised Learning:监督学习
+ Unsupervised Learning:非监督学习
