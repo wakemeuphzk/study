@@ -1,0 +1,7 @@
+welcome to learn
+
+application areas\examples:
+ 1.database mining：上网数据、医疗记录、基因序列、
+ 2.自动化、笔记识别、NLP、机器视觉
+ 3.推荐系统
+ 4.brain、real AI
