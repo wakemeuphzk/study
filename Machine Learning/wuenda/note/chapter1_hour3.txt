@@ -1,10 +1,11 @@
 Supervised Learning  监督学习
 
 1.housing price prediction(房价预测)
-采用何种模型拟合数据？
-"right answers" given -----regression(回归:预测连续的数值输出)
+采用何种模型拟合数据？-----regression(回归:预测连续的数值输出)
 
 2.良性肿瘤还是恶性肿瘤（0、1）
 classification(分类：预测离散型的数值输出)
 
+
+"right answers" given for each example in the datas 
 监督学习其基本思想是，我们数据集中的每个样本都有相应的“正确答案”。再根据这些样本作出预测。
