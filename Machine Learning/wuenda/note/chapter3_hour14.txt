@@ -4,6 +4,7 @@ Matrix
 element:A_ij,ith row jth column
 Dimension of Matrix : rows x columns
 
+向量是特殊的矩阵
 Vector:an N X 1 matrix
 element:y_i ith vector
 1下标向量：从1开始作为下标
