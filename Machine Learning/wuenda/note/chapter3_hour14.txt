@@ -1,0 +1,9 @@
+Matrix 矩阵 Vector 向量
+
+Matrix
+element:A_ij,ith row jth column
+Dimension of Matrix : rows x columns
+
+Vector:an N X 1 matrix
+element:y_i ith vector
+1下标向量：从1开始作为下标
