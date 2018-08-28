@@ -5,6 +5,8 @@ element:A_ij,ith row jth column
 Dimension of Matrix : rows x columns
 
 向量是特殊的矩阵
-Vector:an N X 1 matrix
+Vector:an N X 1 matrix(纵向)
 element:y_i ith vector
 1下标向量：从1开始作为下标
+
+向量指纵向，横向的不称向量，称为行向量。
