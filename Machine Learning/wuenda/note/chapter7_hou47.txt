@@ -1,0 +1,6 @@
+Logistic Regression
+Hypothesis Representation假设表示
+
+Sigmoid Function\Logistic Function
+
+概率论问题
