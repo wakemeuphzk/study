@@ -1,5 +1,5 @@
 正规方程
-
+（Regular Equation）
 
 
 m个样本，n个特征时的适用性比较：
