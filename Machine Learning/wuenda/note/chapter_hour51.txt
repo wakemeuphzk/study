@@ -1,0 +1,16 @@
+高级优化
+
+
+优化算法：
+梯度下降Gradient descent
+1.Conjugate gradient（共轭梯度法）
+2.BFGS
+3.L-BFGS
+上述三个优化算法的优缺点：
+ 1>不需要手动选择学习率
+ 2>比梯度下降要快（收敛快）
+ 缺点：更复杂
+ 
+ 无约束最小化函数fminunc
+ 
+ octave中的向量是从1开始标记的
