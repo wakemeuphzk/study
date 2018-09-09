@@ -1,0 +1,13 @@
+Model representation 1 模型展示1（在数学上定义神经网络的假设）
+
+神经元模型抽象成一个逻辑单元
+Neuron model      logistic unit
+
+增加一个x0=1：bias unit\neuron 偏置神经元\偏置单元
+
+权重weight 即  参数theta
+
+activation function(激活函数)
+
+神经网络：一组神经元连接在一起的集合
+输入层--隐藏层--输出层
