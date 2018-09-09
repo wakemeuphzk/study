@@ -1,0 +1,3 @@
+向量化Vectorization
+
+不向量化需要for循环处理
