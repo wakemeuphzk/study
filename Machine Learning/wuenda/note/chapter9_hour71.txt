@@ -1,0 +1,5 @@
+多元分类（multi-class classification）
+
+一堆多
+
+多个逻辑分类器
