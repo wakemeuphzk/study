@@ -1,0 +1,2 @@
+线性回归的正则化 Regularized linear regrssion
+线性回归的梯度下降的正则化
