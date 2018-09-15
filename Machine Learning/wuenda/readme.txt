@@ -6,4 +6,4 @@ https://study.163.com/course/courseMain.htm?courseId=1004570029
 https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes
 
 pdf课件此处也有提供
-https://github.com/wakemeuphzk/study/tree/master/Machine%20Learning/Machine%20Learning%20in%20Action
+
