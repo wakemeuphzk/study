@@ -1,0 +1,8 @@
+直观上对大间隔的理解 Large Margin Intuition
+ SVM，有时又称大间隔分类器   large margin classifier
+ 
+ 注意是以1与-1为分割线，而不是sigmond中的0，这相当于构建了一个安全因子
+ 
+ SVM的决策边界
+ 
+ 
