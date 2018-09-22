@@ -1,0 +1,17 @@
+1.获取
+    Python Request库
+    
+2.记事本（交互）
+    Jupyter
+    
+3.数据分析
+    Pandas 类似excel
+    
+4.数组与矩阵操作
+    Numpy
+    
+5.可视化
+    Matplotlib
+    
+6.机器学习模块
+    
