@@ -1,0 +1,6 @@
+开源数据分析/操作工具
+
+pandas的术语中，数据列被称为系列（Series）,而表格则被称为数据框（DataFrame）
+
+数据切片 .ix[row,column]
+eg：df.ix[:3,:2]   下标从0开始
