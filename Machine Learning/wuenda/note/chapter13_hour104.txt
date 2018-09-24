@@ -1,0 +1,9 @@
+核函数1
+
+复杂的非线性分类器
+
+如何利用标记点landmark和核函数kernel来训练出复杂的非线性决策边界的方法：
+将一些样本点记作landmark one,一些记作landmark two
+新的特征记作f1,f1=similatiry(x,landmark1),此处的相似度函数即为核函数，例子中是高斯核函数，k(x,landmark1)
+当landmark1离特征点特别近，则计算出的新特征f1近似于1;当当landmark1离特征点特别远，则计算出的新特征f1近似于0
+给定一组参数，代入，可以找到一个大致的决策边界
