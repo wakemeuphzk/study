@@ -1,0 +1,8 @@
+无监督学习————聚类算法（Clustering）
+
+聚类算法的应用：
+1.Market segmentation:市场分割
+2.Social network analysis:社交网络分析
+3.Organize computing clusters: 组织计算机集群
+4.Astronomical data analysis:天文学的数据分析
+
