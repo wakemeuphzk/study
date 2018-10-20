@@ -1,0 +1,5 @@
+问题规划（Problem formulation）
+
+推荐系统（recommender system）:机器学习的一个重要应用
+
+例子：预测用户对电影的评分
