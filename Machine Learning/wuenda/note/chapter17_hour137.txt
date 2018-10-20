@@ -1,0 +1,5 @@
+矢量化：低轶矩阵分解（vectorization:low rank matrix factorization）
+
+如何用向量化来实现协同过滤算法：低轶矩阵分解
+
+如何找到相关的电影？
