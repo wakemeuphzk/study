@@ -1,0 +1,8 @@
+PCA问题规划2
+
+PCA之前，先对数据进行预处理，一般都会有均值标准化处理（mean normalization）\特征缩放（feature scaling）
+
+
+协方差矩阵Sigma
+octave中的svd（）进行奇异值分解
+[U,S,V] = svd(Sigma)
