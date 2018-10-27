@@ -5,10 +5,19 @@
 CART(Classification And Regression Tree):既可以用作分类，也可以用作回归,这种决策树
 
 树的深度越深，越容易过拟合（根节点算第零层）
-代码中生成文件.dot文件，可以用GVEdit打开，可以看到树的样子，包含特征与临界点
+代码中生成文件.dot文件，可以用GVEdit打开，可以看到树的样子，包含特征与边界值
 此.dot文件可以生成对应的图片，eg:dot Tpng -o 1.png 1.dot
 源数据集有4个特征，为了方便画图，我们随机取了两个特征进行训练预测并plot,然后共有6个图，每个图的准确率是不一样的，由此可以初步看出那些特征重要
 
+决策树做分类：
+DecisionTreeClassifier(criterion='entropy', max_depth=3)
+决策树分类的边界明显是有锯齿的
+随机森林：
+RandomForestClassifier(n_estimators=200, criterion='entropy', max_depth=4)  #200棵树
+
 决策树做回归的例子
 DecisionTreeRegressor(criterion='mse',max_depth=10)
+
+熵：信息的不确定性
+概率低的事件最后发生了，则其熵值应该大
 
