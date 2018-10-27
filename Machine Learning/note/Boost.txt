@@ -1,0 +1,4 @@
+提升算法（Boost算法）
+1.GDBT:梯度下降提升树
+2.AdaBoost:自适应提升
+3.XGBoost
