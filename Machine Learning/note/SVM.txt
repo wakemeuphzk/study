@@ -1,1 +1,7 @@
 支持向量机
+
+
+小象  《14SVM实践》
+ print '支撑向量的数目：', clf.n_support_
+ print '支撑向量的系数：', clf.dual_coef_
+ print '支撑向量：', clf.support_
