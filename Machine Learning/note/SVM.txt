@@ -32,3 +32,13 @@ SVM中系数的求解：SMO(序列最小最优化Sequential Minimal Optimization
  print '支撑向量的数目：', clf.n_support_
  print '支撑向量的系数：', clf.dual_coef_
  print '支撑向量：', clf.support_
+ 
+ 数据量小或者中等的时候，用SVM;如果数据量比较大，还是建议使用逻辑回归  （计算速度方面的考虑）
+ 调参极为重要：精度与过拟合的折中    
+ C越大，划分的越精确，但是我们需要的是：C在可允许的精度范围内，C尽可能小，可以防止过拟合
+ gamma:gamma越大，相似度衰减的越慢（高斯核函数越胖）
+ 
+ 不平衡数据的处理：
+ 分类器指标：accuracy,precision,recall,f1,f-beta
+ 
+ 实例：SVM用于识别手写数字
