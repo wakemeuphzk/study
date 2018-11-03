@@ -30,4 +30,35 @@ Bagging的策略：bootstrap aggregation
 弱分类器(基本分类器)——————>强分类器
 注意：SVM和LR本身就是强分类器
 
-随机森林
+随机森林:随机森林在bagging基础上做了修改
+1.从样本集中用bootstrap采样选出n个样本
+2.在所有属性中随机选择k个属性，选择最佳分割属性作为节点建立CART决策树       k：超参数
+3.重复以上两步m次，即建立了m棵CART决策树
+4.这m个CART形成随机森林，通过投票表决结果，决定数据属于哪一类
+
+dropout有些像随机森林,为了防止过拟合
+随机森林当初是为了对抗SVM产生的
+
+随机森林也可以做回归
+
+投票机制：
+一般采用少数服从多数：有效多数（加权）
+贝叶斯投票机制：为了防止一些冷门的得分低采取的方案
+
+样本不均衡的常用处理方法：
+1.不要总是用accuray指标，还可以用AUC、recall   
+2.假设样本数目A类比B类多，且严重不平衡
+   1>A类欠采样 Undersampling
+       a.随机欠采样
+       b.A类分成若干子类，分别与B类进入ML模型
+       c.基于聚类的A类分割
+   2>B类过采样 Oversampling
+       避免欠采样造成的信息丢失
+   3>B类数据合成 Synthetic Data Generation
+       a.随机插值到新样本
+       b.SMOTE(Synthetic Minority Over-sampling Technique)
+   4>代价敏感学习 Cose Sensitive Learning
+       降低A类权值，提高B类权值
+   
+
+
