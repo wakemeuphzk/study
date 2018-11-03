@@ -59,6 +59,15 @@ dropout有些像随机森林,为了防止过拟合
        b.SMOTE(Synthetic Minority Over-sampling Technique)
    4>代价敏感学习 Cose Sensitive Learning
        降低A类权值，提高B类权值
+       
+事实证明，有时候欠采样反而比过采样效果要好
+因为随机森林算法有随机，所以分类效果不一定会重现
+
+随机森林也可以做特征选择、异常值检测
+随机森林做异常值检测：统计样本间位于相同决策树的叶子结点的个数，形成样本相似度矩阵
+
+代码环节：
+
    
 
 
