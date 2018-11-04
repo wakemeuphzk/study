@@ -1,0 +1,11 @@
+小象《12XGBoots实践》
+
+XGBoost是使用梯度提升框架实现的高效、灵活、可移植的机器学习库，全称是eXtreme Gradient Boosting,是GBDT(GBM)的一个C++实现，
+它将树的生成并行完成，从而提高学习速度。
+
+xgboost需要单独下载引入，sklearn中没有
+DMatirx
+
+Kaggle:是一个数据分析的竞赛平台。
+kaggle上的泰坦尼克号的存活数据
+ 数据预处理：清洗
