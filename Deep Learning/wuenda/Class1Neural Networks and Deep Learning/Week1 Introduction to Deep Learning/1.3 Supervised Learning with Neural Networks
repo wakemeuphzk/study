@@ -1,0 +1,13 @@
+神经网络的监督性学习
+
+应用如： 
+房价预测Housing （标准神经网络Standard Neural Networks SNN）
+投放广告Ad,user info（标准神经网络SNN）
+图像处理Image（卷积神经网络Convolutional Neural Network CNN）
+语言识别Audio（循环神经网络Recurrent Neural Network RNN）
+自然语言处理NLP(更复杂的循环神经网络RNN)
+自动驾驶（混合的神经网络）
+
+结构化数据与非结构化数据：
+多亏了深度学习和神经网络，计算机现在能更好地解释非结构化数据，这是与几年前相比的结果，这为我们创造了机会。
+许多新的令人兴奋的应用被使用，语音识别、图像识别、自然语言文字处理，甚至可能比两三年前的还要多。
