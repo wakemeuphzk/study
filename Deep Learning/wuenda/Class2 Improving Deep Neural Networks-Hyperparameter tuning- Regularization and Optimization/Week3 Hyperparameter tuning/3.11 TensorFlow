@@ -1,0 +1,75 @@
+tensorflow
+
+1.例子：TensorFlow找到使代价函数最小的参数值
+
+import numpy as np
+import tensorflow as tf
+#导入TensorFlow
+w = tf.Variable(0,dtype = tf.float32)
+#接下来，让我们定义参数w，在TensorFlow中，你要用tf.Variable()来定义参数
+#然后我们定义损失函数：
+cost = tf.add(tf.add(w**2,tf.multiply(- 10.,w)),25)
+#然后我们定义损失函数J
+然后我们再写：
+train = tf.train.GradientDescentOptimizer(0.01).minimize(cost)
+#(让我们用0.01的学习率，目标是最小化损失)。
+#最后下面的几行是惯用表达式:
+init = tf.global_variables_initializer()
+session = tf.Session()#这样就开启了一个TensorFlow session。
+session.run(init)#来初始化全局变量。
+#然后让TensorFlow评估一个变量，我们要用到:
+session.run(w)
+#上面的这一行将w初始化为0，并定义损失函数，我们定义train为学习算法，它用梯度下降法优化器使损失函数最小化，
+但实际上我们还没有运行学习算法，所以#上面的这一行将w初始化为0，并定义损失函数，
+我们定义train为学习算法，它用梯度下降法优化器使损失函数最小化，但实际上我们还没有运行学习算法，所以session.run(w)评估了w，让我：：
+print(session.run(w))
+所以如果我们运行这个，它评估等于0，因为我们什么都还没运行。
+
+#现在让我们输入：
+$session.run(train)，它所做的就是运行一步梯度下降法。
+#接下来在运行了一步梯度下降法后，让我们评估一下w的值，再print：
+print(session.run(w))
+#在一步梯度下降法之后，w现在是0.1。
+
+现在我们运行梯度下降1000次迭代：
+这是运行了梯度下降的1000次迭代，最后变成了4.99999，最优值是5，这个结果已经很接近了。
+
+w是我们想要优化的参数，因此将它称为变量，注意我们需要做的就是定义一个损失函数，使用这些add和multiply之类的函数。
+TensorFlow知道如何对add和mutiply，还有其它函数求导，这就是为什么你只需基本实现前向传播，
+它能弄明白如何做反向传播和梯度计算，因为它已经内置在add，multiply和平方函数中。
+
+cost = tf.add(tf.add(w**2,tf.multiply(- 10.,w)),25)可以简写成：
+cost = w**2 - 10*w + 25
+
+
+2.如何把训练数据加入tensorflow
+x = tf.placeholder(tf.float32,[3,1])，让它成为数组
+placeholder函数告诉TensorFlow，你稍后会为提供数值
+coefficient = np.array([[1.],[-10.],[25.]])
+feed_dict = {x:coefficients}
+TensorFlow中的placeholder是一个你之后会赋值的变量，这种方式便于把训练数据加入损失方程，把数据加入损失方程用的是这个句法，
+，用feed_dict来让x=coefficients。如果你在做mini-batch梯度下降，在每次迭代时，你需要插入不同的mini-batch，
+那么每次迭代，你就用feed_dict来喂入训练集的不同子集，把不同的mini-batch喂入损失函数需要数据的地方。
+
+TensorFlow能做什么:你只需说明如何计算损失函数，它就能求导，而且用一两行代码就能运用梯度优化器，Adam优化器或者其他优化器。
+
+
+3.
+session = tf.Session()#这样就开启了一个TensorFlow session。
+session.run(init)#来初始化全局变量。
+print session.run(w) #让TensorFlow评估一个变量
+上述可以改为with结构：
+with tf.Session() as session:
+    session.run(init)
+    print session.run(w) 
+Python中的with命令更方便清理，以防在执行这个内循环时出现错误或例外。
+
+
+4.
+TensorFlow程序的核心是计算损失函数，然后TensorFlow自动计算出导数，以及如何最小化损失，
+因此这个等式或者这行代码所做的就是让TensorFlow建立计算图.
+TensorFlow的优点在于，通过用这个计算损失，计算图基本实现前向传播，TensorFlow已经内置了所有必要的反向函数，
+回忆一下训练深度神经网络时的一组前向函数和一组反向函数，而像TensorFlow之类的编程框架已经内置了必要的反向函数，
+这也是为什么通过内置函数来计算前向函数，它也能自动用反向函数来实现反向传播，即便函数非常复杂，再帮你计算导数，
+这就是为什么你不需要明确实现反向传播，这是编程框架能帮你变得高效的原因之一。
+
