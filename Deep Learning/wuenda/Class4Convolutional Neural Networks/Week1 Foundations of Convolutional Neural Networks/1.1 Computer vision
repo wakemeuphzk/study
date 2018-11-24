@@ -1,0 +1,7 @@
+计算机视觉
+
+1.Image Classification  图片分类
+2.Object detection 物体识别
+3.Neural Style Transfer 图片风格迁移
+
+在应用计算机视觉时要面临一个挑战，就是数据的输入可能会非常大
