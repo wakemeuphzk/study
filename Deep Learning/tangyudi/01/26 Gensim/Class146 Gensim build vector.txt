@@ -1,0 +1,12 @@
+利用gensim构造词向量
+
+gensim库需要单独安装  pip install gensim
+
+Gensim是一款开源的第三方Python工具包，用于从原始的非结构化的文本中，无监督地学习到文本隐层的主题向量表达。 
+它支持包括TF-IDF，LSA(Latent Semantic Analysis,潜在语义分析LSA)，LDA(Latent Dirichlet Allocation)，和word2vec在内的多种主题模型算法， 
+支持流式训练，并提供了诸如相似度计算，信息检索等一些常用任务的API接口
+
+from gensim.models import word2vec
+model = word2vec.Word2Vec(sentences,min_count)
+model.similarity('dog','you')
+min_count:过滤低频词
