@@ -1,0 +1,5 @@
+测试模型相似度结果
+
+加载模型文件
+model = Word2Vec.load('xxx.model')
+model.most_similarity('苹果')
