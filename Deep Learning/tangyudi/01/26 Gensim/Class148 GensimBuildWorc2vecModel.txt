@@ -1,0 +1,2 @@
+使用gensim构造word2vec模型
+
