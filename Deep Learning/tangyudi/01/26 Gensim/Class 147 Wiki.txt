@@ -1,0 +1,14 @@
+维基百科中文数据处理
+
+wiki中文数据作为语料库
+https://dumps.wikimedia.org/zhwiki/
+下载 .xml.bz2格式
+一系列的句子和文章，未分词
+wiki_zh_tw.txt 相对比较小的wiki中文数据，100多m
+也可以下1G多的数据
+
+1.繁体转简体  opencc
+2.分词
+
+
+
