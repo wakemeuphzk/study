@@ -1,0 +1,11 @@
+卷积核参数分析
+
+stride:滑动的步长   stride越小，保留的信息越多，但计算量会越多，故stride选择的要适中
+
+有些像素值会被多个卷积包含在内计算，有些只能被计算一次
+pad=1:在原始的输入上加上一层0，当作边缘，防止原始数据作为边缘值
+
+输出的height Ho 
+输出的height Hi
+Filter的height f
+Ho = (Hi-f+2*pad)/stride + 1
