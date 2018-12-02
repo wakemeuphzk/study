@@ -1,0 +1,22 @@
+感受卷积神经网络的强大
+
+神经网络的步骤：
+LOOP:
+1.Sample a batch of data
+2.Forward prop it through the graph,get loss
+3.Backprop to calculate the gradients
+4.Update the parameters using the gradient
+
+
+CNN的应用
+1.classification 分类
+2.retrieval 检索\推荐
+3.detection 检测
+4.segmentation 分隔
+5.self-driving cars 无人驾驶
+6.NVIDIA Tegra X1
+7.人脸识别
+8.姿势识别
+9.标志识别（车牌识别、手写识别）
+10.Image Captioning  看图说话 (CNN+LSTM)
+11.style transfer 风格转换
