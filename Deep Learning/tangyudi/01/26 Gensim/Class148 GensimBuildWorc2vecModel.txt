@@ -1,2 +1,11 @@
 使用gensim构造word2vec模型
 
+codecs.open('xxxx.txt','r',encoding='utf8')
+
+jieba分词
+
+1.繁体转简体，结果存入文件  opencc
+2.简体分词，结果存文件     jieba
+3.生成词向量模型   word2vec
+
+
