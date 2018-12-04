@@ -1,0 +1,12 @@
+训练技巧之数据增强
+
+1.水平翻转 Horizontal flips （镜像）
+
+2.Random crops/scales  随机裁剪/缩放
+
+3.Random mix/combinations of 以下的混合操作
+   a.translation  平移
+   b.rotation     旋转（角度变换）
+   c.stretching   拉伸
+   d.shearing     修剪
+   e.lens distortions  透镜畸变/镜头扭曲,... (go crazy)
