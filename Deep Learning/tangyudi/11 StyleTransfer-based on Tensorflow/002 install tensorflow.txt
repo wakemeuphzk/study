@@ -1,0 +1,10 @@
+安装tensorflow(cpu版本)
+
+pip install tensorflow
+
+或者通过anaconda安装
+
+
+windows安装3版本的anaconda才能装tensorflow
+
+anaconda prompt
