@@ -1,0 +1,8 @@
+surprise是scikit-surprise的简写
+
+from surprise import KNNBasic,SVD
+KNNBasic有基于
+SVD矩阵分解
+
+from surprise import Dataset
+Dataset里面有100000条关于用户和电影的评分
