@@ -1,0 +1,11 @@
+Surprise库使用方法
+
+数据
+用户id  电影Id  打分值   时间戳
+
+algo = KNNBasic()
+
+衡量标准
+measure=['RMSE','MAE']   #均方根误差、标准误差    平均绝对误差
+
+from surprise import GridSearch
