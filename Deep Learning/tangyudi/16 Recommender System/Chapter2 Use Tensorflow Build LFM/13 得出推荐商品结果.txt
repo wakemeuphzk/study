@@ -1,0 +1,8 @@
+
+pd.DataFrame.from_dict(grid_search.cv_results)  #解析字典转为pandas对象
+
+指定相似度：余弦定理、皮尔森等等
+
+surprise库的网上资源比较少
+
+movielens的数据集
