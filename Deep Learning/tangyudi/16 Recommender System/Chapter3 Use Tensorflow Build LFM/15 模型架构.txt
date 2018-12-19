@@ -1,0 +1,8 @@
+reader进行读取
+.dat的数据文件
+
+将数据集打乱，然后reset_index(drop=True),按9:1进行训练、测试
+
+tf.device('/cpu:0')         #用当前的cpu
+
+根据论文中提到的 overall mean rating,user bias,movie bias
