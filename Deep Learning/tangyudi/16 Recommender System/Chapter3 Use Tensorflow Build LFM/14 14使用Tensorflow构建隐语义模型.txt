@@ -1,0 +1,13 @@
+安装tensorflow
+
+CPU或者GPU版本
+
+movielens数据集
+3900个电影，6000多个用户
+tensorflow流程:
+   1.把各个网络结构定义好，参数初始化
+   2.指定损失函数
+   3.求解
+   
+dims 隐因子的维度
+place_device 用CPU还是GPU
