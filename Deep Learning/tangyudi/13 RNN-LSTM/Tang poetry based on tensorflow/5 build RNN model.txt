@@ -1,0 +1,11 @@
+RNN模型建立
+
+end_points = rnn_model(model='lstm', input_data=input_data, output_data=output_targets, vocab_size=len(
+        words), rnn_size=128, num_layers=2, batch_size=64, learning_rate=FLAGS.learning_rate)
+        
+    if model == 'rnn':
+        cell_fun = tf.contrib.rnn.BasicRNNCell
+    elif model == 'gru':
+        cell_fun = tf.contrib.rnn.GRUCell
+    elif model == 'lstm':
+        cell_fun = tf.contrib.rnn.BasicLSTMCell
