@@ -1,0 +1,21 @@
+运行配置 
+   
+   
+训练网络的完成
+
+import tensorflow as tf
+from poetry.model import rnn_model    
+from poetry.poems import process_poems, generate_batch
+
+
+# tf.app.flags.DEFINE_xxx()就是添加命令行的optional argument（可选参数）
+
+# epoch：1个epoch等于使用训练集中的全部样本训练一次
+tf.app.flags.DEFINE_integer('epochs', 5, 'train how many epochs.')
+
+#预测诗的起始值和终结值
+start_token = 'B'
+end_token = 'E'
+
+# 产生诗向量，字映射表，字集合（语料库）
+    poems_vector, word_to_int, words = process_poems(FLAGS.file_path)
