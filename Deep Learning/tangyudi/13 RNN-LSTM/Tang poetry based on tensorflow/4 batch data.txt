@@ -1,0 +1,8 @@
+batch数据制作
+
+def generate_batch(batch_size, poems_vec, word_to_int)
+先看数据量有多大，决定一个epochs能执行多少个batch
+
+进行数据填充，为了使上下句对仗工整，使用空进行填充
+
+ y_data代表目标输出，由x_data向左移动形成，最后一列没有意义，给出每首诗的上一个字预测一下个字，直到预测完整首诗
