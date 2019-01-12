@@ -1,0 +1,5 @@
+制作LMDB数据源，用caffe提供的脚本文件
+前几行改成自己的caffe安装目录
+要进行一个resize操作，比如ALEXNET或者VGG(迭代起来很慢)通常都是给它resize 227*227.
+指定train.txt，val.txt位置
+Sh LMDB脚本文件。文件是很大的
