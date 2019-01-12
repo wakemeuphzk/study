@@ -5,6 +5,7 @@
 notebook的缺点，不能debug，这里用的eclipse
 
 python里面装一下opencv，用于图像处理
+conda install --channel https://conda.anaconda.org/menpo opencv3
 
 注意：seed，随机的种子指定好，以后切分都是同样的结果
 
