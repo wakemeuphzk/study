@@ -1,0 +1,4 @@
+
+借助anaconda去安装tensorflow
+
+注意，window上，anaconda 的python3.5及以上 才能装tensorflow
