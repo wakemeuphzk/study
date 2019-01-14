@@ -1,0 +1,3 @@
+简介
+
+从tenserflow基本着手，到神经网络，到CNN，到RNN
