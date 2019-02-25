@@ -1,0 +1,17 @@
+
+
+机器人 bot：程序或脚本
+
+robot：人形机器人
+
+ChatBot的玩法：
+1.Retrieval-Based    信息提取
+     优化：  Intent 意图
+2.Generative-Based 生成式的
+      A Neural Conversational Model   必读paper
+      ChatterBot 
+      
+ ChatBot的玩法：知识框架
+      Open Domain（广域）/Closed Domain（专业）
+      Retrieval-Based基于人设（）/Generative-Based(基于数据)
+3.Long vs. Short
