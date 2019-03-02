@@ -17,3 +17,18 @@
 拯救 @某⼈, 表情符号, URL, #话题符号
 可以用正则表达式处理
 http://www.regexlab.com/zh/regref.htm 正则表达式对照表
+
+tokens_re = re.compile(r'('+'|'.join(regex_str)+')', re.VERBOSE | re.IGNORECASE)
+emoticon_re = re.compile(r'^'+emoticons_str+'$', re.VERBOSE | re.IGNORECASE)
+def tokenize(s):
+return tokens_re.findall(s)
+def preprocess(s, lowercase=False):
+tokens = tokenize(s)
+if lowercase:
+tokens = [token if emoticon_re.search(token) else token.lower() for token in
+tokens]
+return tokens
+tweet = 'RT @angelababy: love you baby! :D http://ah.love #168cm'
+print(preprocess(tweet))
+# ['RT', '@angelababy', ':', 'love', 'you', 'baby',
+# ’!', ':D', 'http://ah.love', '#168cm']
