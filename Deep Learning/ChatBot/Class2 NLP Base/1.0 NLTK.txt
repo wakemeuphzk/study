@@ -30,7 +30,7 @@ NLTK功能一览表：语聊、分词、语义树
 文本处理流程：
  1.预处理preprocess
     分词 tokenize
-    停用词（去除虚词等）
+    去除虚词、介词等
     用数字表达词 （词向量）
  2.Make Features   特征工程
  3.ML  
