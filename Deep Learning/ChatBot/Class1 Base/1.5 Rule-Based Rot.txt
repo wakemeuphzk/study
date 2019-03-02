@@ -1,0 +1,100 @@
+最基础版本的rule-based机器人
+       就是：问答系统
+小学生级别 问什么、答什么
+缺点：不能理解问题
+
+升级1：
+通过关键词来理解意图（intent）
+缺点：仍然是文字层面的“精准对应”。
+现在主流的研究方向，是做到语义层面的对应。在这个层面，就需要用到word vector之类的embedding方法，以后课上涉及
+
+升级2：
+知识体系：可以用各种数据库，建立起一套体系，然后通过搜索的方式，来查找答案。建立目标行业的database.
+同样的构建知识图谱的玩法，
+也可以使用一些Logic Programming，比如上个世纪学AI的同学都会学的Prolog。
+或者比如，python版本的prolog：PyKE。
+他们可以构建一种复杂的逻辑网络，让你方便提取信息，
+son_of(bruce, thomas, norma)
+son_of(fred_a, thomas, norma)
+
+
+升级3：
+分前端后端。我们这里讲的算法，都是后端跑的。
+为了做一个靠谱的前端，很多项目往往也需要一个简单易用，靠谱的前端。
+比如，利用Google的API，写一个类似钢铁侠Tony的语音小秘书Jarvis：
+我们先来看一个最简单的说话版本。利用gTTs(Google Text-to-Speech API), 把文本转化为音频。
+from gtts import gTTS
+import os
+tts = gTTS(text='您好，我是您的私人助手，我叫小辣椒', lang='zh-tw')
+tts.save("hello.mp3")
+os.system("mpg321 hello.mp3")
+同理，有了文本到语音的功能，
+我们还可以运用Google API读出Jarvis的回复：
+（注意：这里需要你的机器安装几个库 SpeechRecognition, PyAudio 和 PySpeech）
+import speech_recognition as sr
+from time import ctime
+import time
+import os
+from gtts import gTTS
+import sys
+ 
+# 讲出来AI的话
+def speak(audioString):
+    print(audioString)
+    tts = gTTS(text=audioString, lang='en')
+    tts.save("audio.mp3")
+    os.system("mpg321 audio.mp3")
+
+# 录下来你讲的话
+def recordAudio():
+    # 用麦克风记录下你的话
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        audio = r.listen(source)
+ 
+    # 用Google API转化音频
+    data = ""
+    try:
+        data = r.recognize_google(audio)
+        print("You said: " + data)
+    except sr.UnknownValueError:
+        print("Google Speech Recognition could not understand audio")
+    except sr.RequestError as e:
+        print("Could not request results from Google Speech Recognition service; {0}".format(e))
+ 
+    return data
+
+# 自带的对话技能（rules）
+def jarvis():
+    
+    while True:
+        
+        data = recordAudio()
+
+        if "how are you" in data:
+            speak("I am fine")
+
+        if "what time is it" in data:
+            speak(ctime())
+
+        if "where is" in data:
+            data = data.split(" ")
+            location = data[2]
+            speak("Hold on Tony, I will show you where " + location + " is.")
+            os.system("open -a Safari https://www.google.com/maps/place/" + location + "/&amp;")
+
+        if "bye" in data:
+            speak("bye bye")
+            break
+
+# 初始化
+time.sleep(2)
+speak("Hi Tony, what can I do for you?")
+
+# 跑起
+jarvis()
+
+
+
+
+
