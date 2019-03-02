@@ -1,0 +1,35 @@
+归一化处理
+
+词形（英文中）
+Inflection变化: walk => walking => walked   不影响词性   
+derivation 引申: nation (noun) => national (adjective) => nationalize (verb)  影响词性
+
+词形归一化
+Stemming 词⼲提取：⼀般来说，就是把不影响词性的inflection的⼩尾巴砍掉    from nltk.stem.porter import PorterStemmer
+walking 砍ing = walk
+walked 砍ed = walk
+Lemmatization 词形归⼀：把各种类型的词的变形，都归为⼀个形式   from nltk.stem import WordNetLemmatizer
+went 归⼀ = go
+are 归⼀ = be
+
+lemma的小问题，比如went 可以是动词go的过去式，也可以是英文名
+为了解决上述问题，需要加上POS Tag(指明part-of-speech)
+# ⽊有POS Tag，默认是NN 名词
+>>> wordnet_lemmatizer.lemmatize(‘are’)
+‘are’
+>>> wordnet_lemmatizer.lemmatize(‘is’)
+‘is’
+# 加上POS Tag
+>>> wordnet_lemmatizer.lemmatize(‘is’, pos=’v’)
+u’be’
+>>> wordnet_lemmatizer.lemmatize(‘are’, pos=’v’)
+u’be’
+NLTK标注POS Tag
+
+stopwords 停用
+eg:the ,you,she,he
+NLTK去除stopwords
+from nltk.corpus import stopwords
+
+典型的文本预处理流水线(将原始的文本转换为干净的词的列表)：
+raw_text    tokenize（POS Tag）    lemma/stemming(POS Tag)   stopwords    word_list
