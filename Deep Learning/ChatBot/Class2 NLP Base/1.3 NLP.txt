@@ -1,0 +1,35 @@
+什么是自然语言处理？
+     自然语言 到 计算机数据
+     
+文本预处理让我们得到了什么？
+     干净的word list
+     
+NLTK在NLP上的经典应⽤
+1.情感分析
+   用处很广泛
+   最简单的 sentiment dictionary（情感词库）
+    like 1
+    good 2
+    bad -2
+    terrible -3
+    类似于关键词打分机制
+    ⽐如： AFINN-111
+http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010
+    nltk完成一个简易的情感分析：
+    先分词，将每个词去情感词库中搜索，将其得分相加
+    sentiment_dictionary = {}
+for line in open('data/AFINN-111.txt')
+word, score = line.split('\t')
+sentiment_dictionary[word] = int(score)
+# 把这个打分表记录在⼀个Dict上以后
+# 跑⼀遍整个句⼦，把对应的值相加
+total_score = sum(sentiment_dictionary.get(word, 0) for word in words)
+# 有值就是Dict中的值，没有就是0
+# 于是你就得到了⼀个 sentiment score
+  上述缺点：新词怎么办？特殊词汇怎么办？更深层次的玩意⼉怎么办？
+  
+  配上ML的情感分析
+  需要训练集自己先做好打分
+  
+  情感分析工业上用的挺多，但在学术上的进展越来越少了
+
