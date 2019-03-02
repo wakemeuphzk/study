@@ -18,3 +18,21 @@ eg:textblob是NLTK的包装（wrapper）
     Python上著名的⾃然语⾔处理库
     ⾃带语料库，词性分类库,⾃带分类，分词，等等功能
     强⼤的社区⽀持,还有N多的简单版wrapper,EG:textblob
+
+NLTK安装
+
+   import nltk
+   nltk.download()
+   会下载预料（corpora）、模型等
+   
+NLTK功能一览表：语聊、分词、语义树
+   
+文本处理流程：
+ 1.预处理preprocess
+    分词 tokenize
+    停用词（去除虚词等）
+    用数字表达词 （词向量）
+ 2.Make Features   特征工程
+ 3.ML  
+ 
+ 
