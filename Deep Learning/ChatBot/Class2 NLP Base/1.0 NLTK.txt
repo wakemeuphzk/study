@@ -1,0 +1,20 @@
+以NLTK为基础配合讲解自然语言处理的原理
+eg:textblob是NLTK的包装（wrapper）
+
+-NLTK
+- ⽂本处理流程
+    - 分词
+    - 归⼀化
+    - 停⽌词
+- NLP经典三案例
+    - 情感分析
+    - ⽂本相似度
+    - ⽂本分类
+- 深度学习加持
+    - Autoencoder
+    - Word2Vec
+    
+ NLTK
+    Python上著名的⾃然语⾔处理库
+    ⾃带语料库，词性分类库,⾃带分类，分词，等等功能
+    强⼤的社区⽀持,还有N多的简单版wrapper,EG:textblob
