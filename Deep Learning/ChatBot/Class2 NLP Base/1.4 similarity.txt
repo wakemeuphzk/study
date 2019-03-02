@@ -1,0 +1,8 @@
+2.文本相似度
+   ⽤元素频率表⽰⽂本特征（位置固定）
+   用余弦定理比较两个向量的相似度
+   用NLTK进行Frequency 频率统计
+   from nltk import FreqDist
+
+
+3.文本分类
