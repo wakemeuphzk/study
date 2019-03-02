@@ -4,7 +4,7 @@
 Inflection变化: walk => walking => walked   不影响词性   
 derivation 引申: nation (noun) => national (adjective) => nationalize (verb)  影响词性
 
-词形归一化
+词形归一化 normalization
 Stemming 词⼲提取：⼀般来说，就是把不影响词性的inflection的⼩尾巴砍掉    from nltk.stem.porter import PorterStemmer
 walking 砍ing = walk
 walked 砍ed = walk
@@ -24,7 +24,7 @@ lemma的小问题，比如went 可以是动词go的过去式，也可以是英�
 u’be’
 >>> wordnet_lemmatizer.lemmatize(‘are’, pos=’v’)
 u’be’
-NLTK标注POS Tag
+NLTK标注POS Tag（词性标注）
 
 stopwords 停用
 eg:the ,you,she,he
