@@ -1,0 +1,84 @@
+深度学习的加持
+   减少了特征工程（人工地参与）
+   
+gensim:word2vec
+keras：对theano\tensroflow的wrapper
+
+theano:在tensorflow之前，比较流行的框架
+
+- NLTK is used primarily for general NLP tasks (tokenization, POS tagging, parsing, etc.) 
+- Sklearn is used primarily for machine learning (classification, clustering, etc.) 
+- Gensim is used primarily for topic modeling（主题模型） and document similarity.
+
+Although considerably overlapping, I personnaly prefer using NLTK for pre-processing, GENSIM as kind of base platform, and SKLEARN for third step processing issues.
+
+
+Auto-Encoder：自编码器
+    比较基础的深度学习的思想
+    Encoder   Decoder
+    缺点：data-specific、lossy、learn from examples   不方便拓展，eg:用猫和狗训练的不能用于数字
+Auto-Encoder用于keras的例子
+    在深度学习中，数据是越原始越好，不要加入过多的人为处理（特征工程）
+    构建模型
+    def fit(self, x):
+"""
+模型构建。
+:param x: input text
+"""
+# 把所有的trainset都搞成同⼀个size，并把每⼀个字符都换成ascii码
+x_train = self.preprocess(x, length=self.sen_len)
+# 然后给input预留好位置
+input_text = Input(shape=(self.sen_len,))
+# "encoded" 每⼀经过⼀层，都被刷新成⼩⼀点的“压缩后表达式”
+encoded = Dense(1024, activation='tanh')(input_text)
+encoded = Dense(512, activation='tanh')(encoded)
+encoded = Dense(128, activation='tanh')(encoded)
+encoded = Dense(self.encoding_dim, activation='tanh')(encoded)
+# "decoded" 就是把刚刚压缩完的东⻄，给反过来还原成input_text
+decoded = Dense(128, activation='tanh')(encoded)
+decoded = Dense(512, activation='tanh')(decoded)
+decoded = Dense(1024, activation='tanh')(decoded)
+decoded = Dense(self.sen_len, activation='sigmoid')(decoded)
+# 整个从⼤到⼩再到⼤的model，叫 autoencoder
+self.autoencoder = Model(input=input_text, output=decoded)
+# 那么 只从⼤到⼩（也就是⼀半的model）就叫 encoder
+self.encoder = Model(input=input_text, output=encoded)
+
+# 同理，我们接下来搞⼀个decoder出来，也就是从⼩到⼤的model
+# 来，⾸先encoded的input size给预留好
+encoded_input = Input(shape=(1024,))
+# autoencoder的最后⼀层，就应该是decoder的第⼀层
+decoder_layer = self.autoencoder.layers[-1]
+# 然后我们从头到尾连起来，就是⼀个decoder了！
+decoder = Model(input=encoded_input, output=decoder_layer(encoded_input))
+# compile
+self.autoencoder.compile(optimizer='adam', loss='mse')
+# 跑起来
+self.autoencoder.fit(x_train, x_train,
+nb_epoch=self.epoch,
+batch_size=1000,
+shuffle=True,
+)
+# 这⼀部分是⾃⼰拿⾃⼰train⼀下KNN，⼀件简单的基于距离的分类器
+x_train = self.encoder.predict(x_train)
+self.kmeanmodel.fit(x_train)
+
+def predict(self, x):
+"""
+做预测。
+:param x: input text
+:return: predictions
+"""
+# 同理，第⼀步 把来的 都给搞成ASCII化，并且⻓度相同
+x_test = self.preprocess(x, length=self.sen_len)
+# 然后⽤encoder把test集给压缩
+x_test = self.encoder.predict(x_test)
+# KNN给分类出来
+preds = self.kmeanmodel.predict(x_test)
+return preds
+
+Auto-Encoder思想很好，但是实际效果并没有太好，主要用于数据压缩
+工业中用的比较好的是word2vec、lstm等
+
+
+          
