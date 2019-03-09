@@ -1,0 +1,9 @@
+ChatterBot是一个基于机器学习的聊天机器人引擎， 构建在python上， 主要特点是可以自可以从已有的对话中进行学(jiyi)习(pipei)。
+基于数据驱动
+
+一.每个部分都设计了不同的“适配器” (Adapter)
+1. 机器人应答逻辑 => Logic Adapters
+  a.Closest Match Adapter  字符串模糊匹配(编辑距离)       根据置信度来决定
+  b.Closest Meaning Adapter 借助nltk的WordNet， 近义词评估
+  c.Time Logic Adapter  处理涉及时间的提问
+  d.Mathematical Evaluation Adapter 涉及数学运算
