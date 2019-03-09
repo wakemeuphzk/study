@@ -1,0 +1,20 @@
+预备知识
+1.检索与匹配
+   基于检索与匹配   比如 google搜索
+   a.知识库（存储了问题与回复内容）
+   b.检索： 搜寻相关问题
+   c.匹配： 对结果进行排序
+2.分类与朴素贝叶斯
+3.编辑距离
+  a.编辑距离/Levenshtein距离， 是指两个字符串之间， 由一个转成另一个所需要的最少编辑操作次数。
+  b.允许的编辑操作包括：
+   1> 将一个字符替换成另一个字符
+   2>插入一个字符
+   3> 删除一个字符
+  c.python编辑距离
+     Python在string 类型中， 默认的 utf-8 编码下， 一个中文字符是用三个字节来表示的。 中文要用unicode。
+     # -*- coding:utf-8 -*-
+     import Levenshtein
+     texta = u‘七月在线'
+     textb = u‘七月·在线'
+     print Levenshtein.distance(texta,textb)
