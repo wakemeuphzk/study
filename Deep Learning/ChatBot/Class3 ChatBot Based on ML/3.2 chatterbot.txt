@@ -7,3 +7,20 @@ ChatterBot是一个基于机器学习的聊天机器人引擎， 构建在python
   b.Closest Meaning Adapter 借助nltk的WordNet， 近义词评估
   c.Time Logic Adapter  处理涉及时间的提问
   d.Mathematical Evaluation Adapter 涉及数学运算
+2. 存储器后端 => Storage Adapters
+  a.Read Only Mode 只读模式， 当有输入数据到chatterbot的时候， 数据库并不会发生改变 (防止机器人被教坏)
+  b.Json Database Adapter用以存储对话数据的接口， 对话数据以Json格式进行存储。
+  c.Mongo Database Adapter 以MongoDB database方式来存储对话数据
+3.输入形式 => Input Adapters
+  a.Variable input type adapter 允许chatter bot接收不同类型的输入的， 如strings,dictionaries和Statements 
+  b.Terminal adapter  使得ChatterBot可以通过终端进行对话
+  c.HipChat Adapter 使得ChatterBot 可以从HipChat聊天室获取输入语句， 通过HipChat 和 ChatterBot 进行对话
+  d.Speech recognition 语音识别输入， 详见chatterbot-voice
+4.输出形式 => Output Adapters
+  a.Output format adapter 支持text， json和object格式的输出
+  b.Terminal adapter
+  c.HipChat Adapter
+  d.Mailgun adapter 允许chat bot基于Mailgun API进行邮件的发送
+  e.Speech synthesis TTS(Text to speech)部分， 详见chatterbot-voice
+  
+  可插拔性
