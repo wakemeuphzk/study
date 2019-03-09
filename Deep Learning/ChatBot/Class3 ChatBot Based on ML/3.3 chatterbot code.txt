@@ -1,0 +1,40 @@
+处理流程：输入——输入预处理——adapter处理（可以是adapter的列表）——返回
+
+无法解决上下文的问题！！！！！
+
+1.基础版本
+注意指定编码，尤其用中文注释
+# -*- coding: utf-8 -*-
+from chatterbot import ChatBot
+
+# 构建ChatBot并指定Adapter
+
+2.处理时间和数学计算的Adapter
+
+3.导出语料到json文件
+   如果一个已经训练好的chatbot，你想取出它的语料，用于别的chatbot构建，可以这么做
+   
+4.反馈式学习聊天机器人
+  反馈式的聊天机器人，会根据你的反馈进行学习
+  
+5.使用Ubuntu数据集构建聊天机器人
+
+6.借助微软的聊天机器人
+   关于获取微软的user access token请参考以下的文档
+   https://docs.botframework.com/en-us/restapi/directline/
+   可以借用微软小冰，限定性地调用其回复
+   
+7.HipChat聊天室Adapter
+
+
+8.邮件回复的聊天系统
+
+9.一个中文的例子
+注意chatterbot，中文聊天机器人的场景下一定要用python3.X，用python2.7会有编码问题。
+
+10.利用已经提供好的小中文语料库
+   数据量比较小
+   
+chatterbot官网
+github上源码解析
+如何新加自己的
