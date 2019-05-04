@@ -1,3 +1,7 @@
+在caffe中经常使用的数据类型是lmdb或leveldb;不是常见的jpg,jpeg,png,tif等格式;
+因此，需要进行格式转换，通过输入你自己的图片目录（下有的大量图片）转换成一个lmdb库文件输出;
+这个过程一般由caffe工具convert_imageset完成，该工具在编译过的caffe-master/build/tools目录下;
+
 制作LMDB数据源，用caffe提供的脚本文件
 前几行改成自己的caffe安装目录
 要进行一个resize操作，比如ALEXNET或者VGG(迭代起来很慢)通常都是给它resize 227*227.
