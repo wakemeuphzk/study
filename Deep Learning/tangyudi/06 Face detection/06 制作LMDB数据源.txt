@@ -1,0 +1,9 @@
+制作LMDB数据源
+
+sh face-lmdb.sh
+
+训练数据3w3k多（5.2G），测试数据8k多个(1.3G)
+
+LMDB通常用来做单label（分类）
+
+HDF5如何制作？在caffe教程中
